@@ -1,6 +1,6 @@
 package com.enviro.assessment.grad001.thato_mokgotsi.repository;
 
-import com.enviro.assessment.grad001.thato_mokgotsi.model.WasteCategory;
+import com.enviro.assessment.grad001.thato_mokgotsi.model.DisposalGuidelines;
 import lombok.NonNull;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,20 +13,20 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Repository interface for waste categories
+ * Repository interface for disposal guidelines
  */
 @Repository
-public interface WasteCategoryRepository extends JpaRepository<WasteCategory, Long>, JpaSpecificationExecutor<WasteCategory> {
+public interface DisposalGuidelinesRepository extends JpaRepository<DisposalGuidelines, Long>, JpaSpecificationExecutor<DisposalGuidelines> {
 
-    @Query(value = "SELECT * FROM waste_category", nativeQuery = true)
-
-    @NonNull
-    List<WasteCategory> findAll();
+    @Query(value = "SELECT * FROM disposal_guidelines", nativeQuery = true)
 
     @NonNull
-    Page<WasteCategory> findAll(@NonNull Pageable pageable);
+    List<DisposalGuidelines> findAll();
 
     @NonNull
-    List<WasteCategory> findAll(@NonNull Sort sort);
+    Page<DisposalGuidelines> findAll(@NonNull Pageable pageable);
+
+    @NonNull
+    List<DisposalGuidelines> findAll(@NonNull Sort sort);
 
 }

@@ -6,19 +6,16 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Entity class for waste category
+ * Entity class for Recycling Tips
  */
 @Getter
 @Setter
 @Entity
-public class WasteCategory {
+public class RecyclingTips {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // Primary key
 
-    @NotBlank(message = "Category name is required")
-    private String name; // Name of the waste category
-
-    private String description; // Description of the waste category
-
+    @NotBlank(message = "Tip is required")
+    private String tip; // Recycling tip
 }

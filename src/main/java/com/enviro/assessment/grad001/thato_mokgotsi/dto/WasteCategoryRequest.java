@@ -1,27 +1,17 @@
 package com.enviro.assessment.grad001.thato_mokgotsi.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
 
+/**
+ * Request class for waste category
+ */
+@Getter
 public class WasteCategoryRequest {
 
     @NotBlank(message = "Category name is required")
-    private String name;
+    private String name; // Name of the waste category
 
-    private String description;
+    private String description; // Description of the waste category
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
