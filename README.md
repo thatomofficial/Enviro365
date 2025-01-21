@@ -32,7 +32,7 @@ The Waste Sorting Application is a Spring Boot-based project designed to manage 
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/thatomofficial/waste-sorting-app.git
+    git clone git@github.com:thatomofficial/Enviro365.git
     cd waste-sorting-app
     ```
 
